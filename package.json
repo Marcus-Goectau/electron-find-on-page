@@ -1,6 +1,6 @@
 {
-  "name": "electron-prompt",
-  "version": "0.0.0-dev",
+  "name": "electron-find-on-page",
+  "version": "1.0.0",
   "description": "Electron helper to prompt for a value via input or select",
   "keywords": [
     "electron",
@@ -8,13 +8,13 @@
     "string"
   ],
   "author": {
-    "name": "p-sam",
-    "email": "p-sam@users.noreply.github.com",
-    "url": "https://github.com/p-sam"
+    "name": "Marcus-Goectau",
+    "email": "Marcus-Goectau@users.noreply.github.com",
+    "url": "https://github.com/Marcus-Goectau"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/p-sam/electron-prompt.git"
+    "url": "https://github.com/Marcus-Goectau/electron-prompt.git"
   },
   "license": "MIT",
   "main": "lib/index.js",
