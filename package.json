@@ -1,7 +1,7 @@
 {
   "name": "electron-find-on-page",
-  "version": "1.0.0",
-  "description": "Electron helper to prompt for a value via input or select",
+  "version": "1.0.1",
+  "description": "Modified electron-prompt to be used as a find on page dialog.",
   "keywords": [
     "electron",
     "prompt",
