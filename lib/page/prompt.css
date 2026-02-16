@@ -1,63 +1,68 @@
 body {
-    font-family: "Roboto", sans-serif;
-    line-height: 1.5em;
-    color: #333;
-    background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5em;
+  color: #333;
+  background-color: #fafafa;
 }
 
 #container {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    height: 100%;
-    overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
 }
 
 #form {
-    width: 100%;
-    padding-top: .5em;
+  width: 100%;
+  padding-top: .5em;
 }
 
-#label {
-    max-width: 100%;
-    max-height: 100%;
-    margin-bottom: .8em;
-    padding: 0 .5em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+#input-wrapper {
+  position: relative;
+  width: 90%;
+  margin: 0 auto 1.2em;
 }
 
 #data {
-    border-radius: 2px;
-    background: #fff;
-    width: 90%;
-    padding: .4em .5em;
-    border: 1px solid #ccc;
-    min-height: 2em;
-    margin: 0 0 1.2em;
+  border-radius: 2px;
+  background: #fff;
+  width: 100%;
+  padding: .4em 60px .4em .5em;
+  border: 1px solid #ccc;
+  min-height: 2em;
+  margin: 0;
+  outline: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-sizing: border-box;
+}
+
+#data:focus {
+  border-color: #666;
+  box-shadow: inset 0 0 0 1px #666;
 }
 
 select#data {
-    height: 2em;
+  height: 2em;
 }
 
 #data-container {
-    text-align: center;
+  width: 100%;
 }
 
 #buttons {
-    text-align: right;
-    padding: 0 .5em 0 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 0 5%;
 }
 
 #find-previous,
 #find-next,
 #cancel {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  vertical-align: middle;
   background: #fff;
   border: 1px solid #ccc;
   color: #555;
@@ -69,8 +74,8 @@ select#data {
   width: 32px;
   height: 32px;
   border-radius: 2px;
-  transition: background-color .15s ease-in-out;
-  margin: 2px;
+  outline: none;
+  transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 #find-previous svg,
@@ -95,12 +100,25 @@ select#data {
   background-color: #d0d0d0;
 }
 
+#find-previous:focus-visible,
+#find-next:focus-visible,
+#cancel:focus-visible {
+  border-color: #666;
+  box-shadow: inset 0 0 0 1px #666;
+}
+
 #match-counter {
   position: absolute;
-  top: 10%;
-  right: 10%;
-  text-align: center;
-  font-size: 0.9em;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
   color: #666;
   font-weight: 500;
+  white-space: nowrap;
+  background: #fff;
+  padding: 0 4px;
+  pointer-events: none;
+  z-index: 10;
+  line-height: 1;
 }
