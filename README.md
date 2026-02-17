@@ -1,10 +1,10 @@
-# electron-prompt
+# electron-find-on-page
 
 Electron helper to prompt for find-on-page functionality
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
-<p align="center"><img width="482" alt="prompt-preview" src="https://user-images.githubusercontent.com/17620180/111753337-09c0c680-8897-11eb-8ce8-43de29c143bd.png"></p>
+<img width="360" height="192" alt="image" src="https://github.com/user-attachments/assets/27638f5d-18c3-4cb4-afa3-87e923f4fcb3" />
 
 ## Usage
 
@@ -53,8 +53,6 @@ prompt([options, parentBrowserWindow]).then(...).catch(...)
 | Key  | Explanation |
 | ------------- | ------------- |
 | title  | (optional, string) The title of the prompt window. Defaults to 'Prompt'. |
-| label  | (optional, string) The label which appears on the prompt for the input field. Defaults to 'Please input a value:'. |
-| buttonLabels | (optional, object) The text for the OK/cancel buttons. Properties are 'ok' and 'cancel'. Defaults to null. |
 | value  | (optional, string) The default value for the input field. Defaults to null.|
 | type   | (optional, string) The type of input field, either 'input' for a standard text input field or 'select' for a dropdown type input. Defaults to 'input'.|
 | inputAttrs  | (optional, object) The attributes of the input field, analagous to the HTML attributes: `{type: 'text', required: true}` -> `<input type="text" required>`. Used if the type is 'input' |
