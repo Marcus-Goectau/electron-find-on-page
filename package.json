@@ -1,6 +1,6 @@
 {
   "name": "electron-find-on-page",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Modified electron-prompt to be used as a find on page dialog.",
   "keywords": [
     "electron",
