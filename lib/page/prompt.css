@@ -58,10 +58,10 @@ select#data {
   padding: 0 5%;
 }
 
-#toggle-group {
+#button-group-left {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  gap: 6px;
 }
 
 #nav-buttons {
@@ -71,7 +71,8 @@ select#data {
 
 #find-previous,
 #find-next,
-#cancel {
+#cancel,
+#match-case {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,69 +91,16 @@ select#data {
   transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.toggle-switch {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  user-select: none;
+.match-case-icon {
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1;
 }
 
-.toggle-switch input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  pointer-events: none;
-}
-
-.toggle-slider {
-  position: relative;
-  width: 32px;
-  height: 18px;
-  background-color: #ccc;
-  border-radius: 18px;
-  border: 1px solid transparent;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.toggle-slider::before {
-  content: '';
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  left: 2px;
-  top: 2px;
-  background-color: #fff;
-  border-radius: 50%;
-  transition: transform 0.2s ease-in-out;
-}
-
-.toggle-switch input[type="checkbox"]:checked + .toggle-slider {
-  background-color: #4a90e2;
-}
-
-.toggle-switch input[type="checkbox"]:checked + .toggle-slider::before {
-  transform: translateX(14px);
-}
-
-.toggle-switch input[type="checkbox"]:focus-visible + .toggle-slider {
-  border-color: #666;
-  box-shadow: inset 0 0 0 1px #666;
-}
-
-.toggle-label {
-  font-size: 0.75em;
+#match-case.active {
+  background-color: #a8c5dc;
   color: #555;
-  line-height: 1.2;
-}
-
-#whole-word-label {
-  width: 65px;
-}
-
-#match-case-label {
-  width: 50px;
+  border-color: #a8c5dc;
 }
 
 #find-previous svg,
@@ -167,29 +115,32 @@ select#data {
 
 #find-previous:hover,
 #find-next:hover,
-#cancel:hover {
+#cancel:hover,
+#match-case:hover {
   background-color: #e8e8e8;
+}
+
+#match-case.active:hover {
+  background-color: #8db4ce;
 }
 
 #find-previous:active,
 #find-next:active,
-#cancel:active {
+#cancel:active,
+#match-case:active {
   background-color: #d0d0d0;
+}
+
+#match-case.active:active {
+  background-color: #72a3c0;
 }
 
 #find-previous:focus-visible,
 #find-next:focus-visible,
-#cancel:focus-visible {
+#cancel:focus-visible,
+#match-case:focus-visible {
   border-color: #666;
   box-shadow: inset 0 0 0 1px #666;
-}
-
-.toggle-switch:hover .toggle-slider {
-  background-color: #bbb;
-}
-
-.toggle-switch input[type="checkbox"]:checked:hover + .toggle-slider {
-  background-color: #3a7ec4;
 }
 
 #match-counter {
